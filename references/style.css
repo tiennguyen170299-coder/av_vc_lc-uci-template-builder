@@ -1,0 +1,295 @@
+/*
+Q-SYS Level Two Training
+v 2.0
+
+
+
+Everything in this ":root" list is a variable referenced later in the sheet.
+To make global changes, start off by adjusting these to your liking.          */
+
+:root {
+    /* Change these for the main select/highlight colors in the UCI */
+    --ColorAccentDim: #5c4033; /* UPDATED TO BROWN DIM AS TASK 10 REQUIRE - original is #a76692*/
+    --ColorAccentBright: #ff61cd; /* UPDATED TO BROWN BRIGHT AS TASK 10 REQUIRE - original is #ff61cd*/
+
+    
+    /* Main default colors of the UCI buttons, text, etc, aside from Accent */
+    --ColorDark: #2020206e; 
+    --ColorLight: #8b5a2b;  
+
+    /* These are some generic color choices, easy to alter and add! */
+    --ColorWhite: #ffffff;
+    --ColorGreyDark: #404040;
+    --ColorGreyLight: #b8b8b8;
+    --ColorBlack: #000000;
+    --ColorRed: #e61a1ace;
+    --ColorBlue: #3078e4;
+    --ColorGreen: #63be57;
+   
+
+     /* Font options! You could use a custom font like this: url(fonts/yourfont.ttf) */
+    --ProjectFont: "Montserrat"; 
+    --TextSize-05-EXLarge: 68;
+    --TextSize-04-Large: 54;
+    --TextSize-03-Medium: 40;
+    --TextSize-02-Small: 26;
+    --TextSize-01-Tiny: 12; 
+
+     /* Basic border options applied to most objects */
+    --BorderWidth-None: 0px;
+    --BorderWidth-Thin: 3px;
+    --BorderWidth-Thick: 5px;
+    --BorderRadius-Tight: 15px;
+    --BorderRadius-Wide: 25px;
+    --Padding: 8px;
+
+     /* This is the image used for the UCI background   */
+    --BackgroundImage: url(images/background.jpg);
+}
+
+
+
+
+
+/* Default Control Styles */
+
+button {
+    background-color: var(--ColorDark);
+    -qsc-icon-color: var(--ColorLight);
+    font-family: var(--ProjectFont);
+    font-size: var(--TextSize-02-Small);
+    padding: var(--Padding);
+    border-radius: var(--BorderRadius-Tight);
+    border-width: var(--BorderWidth-Thin);
+    border-color: var(--ColorAccentDim)
+}
+
+button:value(1) {
+    background-color: var(--ColorLight);
+    -qsc-icon-color: var(--ColorDark);
+    border-color: var(--ColorAccentBright);
+    border-width: var(--BorderWidth-Thick);
+}
+
+fader {
+    -qsc-render-style: layer;
+    -qsc-fader-slot-class: fader-slot;
+    -qsc-fader-slot-width: 8px;
+    -qsc-fader-cap-class: fader-cap;
+    -qsc-fader-cap-width: 40;
+    -qsc-fader-cap-height: 40;
+    background-color: transparent;
+    color: var(--ColorAccentDim);
+}
+
+.fader-slot {
+    background-color: var(--ColorDark);
+    border-width: var(--BorderWidth-None);
+}
+
+.fader-slot:value(1) {
+    background-color: var(--ColorAccentDim);
+}
+
+.fader-cap {
+    background-color: var(--ColorAccentBright);
+    border: 2px var(--ColorGreyDark);
+    border-radius: var(--BorderRadius-Tight);
+}
+
+groupbox {
+    background-color: var(--ColorDark);
+    border-width: var(--BorderWidth-None);
+    border-radius: var(--BorderRadius-Wide);
+}
+
+meter {
+    -qsc-render-style: layer;
+    -qsc-meter-indicator-class: meter-indicator;
+    background-color: var(--ColorGreyDark);
+    border-width: var(--BorderWidth-None);
+    padding: var(--Padding);
+  }
+  
+.meter-indicator { 
+    background-color: var(--ColorAccentDim);
+  }
+  
+.meter-indicator:value(1) { 
+    background-color: var(--ColorAccentBright);
+  }
+
+
+page {
+    background-image: var(--BackgroundImage);
+  }
+
+
+textblock {
+    color: var(--ColorLight);
+    font-family: var(--ProjectFont);
+    font-size: var(--TextSize-03-Medium);
+    border-width: var(--BorderWidth-None);
+}
+
+textbox {
+    color: var(--ColorWhite);
+    border: var(--ColorAccentDim);
+    border-width: var(--BorderWidth-Thick);
+    background-color: var(--ColorLight);
+    font-family: var(--ProjectFont);
+    font-size: var(--TextSize-03-Medium);
+    padding: var(--Padding);
+    border-radius: var(--BorderRadius-Tight);
+}
+
+
+led {
+    background-color: var(--ColorDark);
+    border-color: var(--ColorGreyDark);
+    border-width: var(--BorderWidth-Thin);
+}
+
+led:value(1) {
+    background-color: var(--ColorAccentBright);
+}
+
+
+listbox {
+    color: var(--ColorLight);
+    font-family: var(--ProjectFont);
+    font-size: var(--SizeMedium);
+    padding: var(--Padding);
+    border-radius: var(--BorderRadius-Tight);
+}
+
+header {
+    color: var(--ColorLight);
+    font-family: var(--ProjectFont);
+    font-size: var(--TextSize-04-Large);
+}
+
+
+combobox {
+    background-color: var(--ColorGreyDark);
+    color: var(--ColorLight);
+    border: var(--ColorAccentDim);
+    font-family: var(--ProjectFont);
+    font-size: var(--TextSize-03-Medium);
+    border-width: var(--BorderWidth-Thin);
+    border-radius: var(--BorderRadius-Tight);
+}
+
+listbox {
+    background-color: var(--ColorGreyDark);
+    color: var(--ColorLight);
+    border: var(--ColorAccentDim);
+    font-family: var(--ProjectFont);
+    font-size: var(--TextSize-03-Medium);
+    border-width: var(--BorderWidth-Thin);
+    border-radius: var(--BorderRadius-Tight);
+}
+
+/* Border Variations */
+
+.Border-Square{
+    border-radius: 0px
+}
+
+.Border-None{
+    border-width: 0px
+}
+
+
+/* Text Classes */
+
+
+.TextColor-White{
+    font-family: var(--ProjectFont);
+    color: var(--ColorWhite)
+}
+
+.TextColor-Red{
+    font-family: var(--ProjectFont);
+    color: var(--ColorRed)
+}
+
+.TextColor-Green{
+    font-family: var(--ProjectFont);
+    color: var(--ColorGreen)
+}
+
+.TextColor-Blue{
+    font-family: var(--ProjectFont);
+    color: var(--ColorBlue)
+}
+
+.TextColor-Black{
+    font-family: var(--ProjectFont);
+    color: var(--ColorBlack)
+}
+
+.TextColor-GreyDark{
+    font-family: var(--ProjectFont);
+    color: var(--ColorGreyDark)
+}
+
+.TextColor-GreyLight{
+    font-family: var(--ProjectFont);
+    color: var(--ColorGreyLight)
+}
+
+.TextSize-05-EXLarge{
+    font-size: var(--TextSize-05-EXLarge);
+}
+
+.TextSize-04-Large{
+    font-size: var(--TextSize-04-Large);
+}
+
+.TextSize-03-Medium{
+    font-size: var(--TextSize-03-Medium);
+}
+
+.TextSize-02-Small{
+    font-size: var(--TextSize-02-Small);
+}
+
+.TextSize-01-Tiny{
+    font-size: var(--TextSize-01-Tiny);
+}
+
+
+/* Color Classes */
+
+.Color-Black {
+    background-color: var(--ColorBlack);
+}
+
+.Color-White {
+    background-color: var(--ColorWhite);
+}
+
+.Color-Red {
+    background-color: var(--ColorRed);
+}
+
+.Color-Blue {
+    background-color: var(--ColorBlue);
+}
+
+.Color-Green {
+    background-color: var(--ColorGreen);
+}
+
+.Color-GreyDark {
+    background-color: var(--ColorGreyDark);
+}
+
+.Color-GreyLight {
+    background-color: var(--ColorGreyLight);
+}
+
+.Color-Transparent {
+    background-color: transparent;
+}

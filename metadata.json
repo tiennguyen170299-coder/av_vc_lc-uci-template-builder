@@ -1,0 +1,6 @@
+{
+  "name": "AV/VC/LC UCI Template Builder",
+  "description": "A professional wizard-style prototype builder for AV, VC, and Lighting Control User Control Interfaces (UCIs) across Q-SYS, Crestron, and Extron systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
